@@ -10,10 +10,15 @@ public class ContactManager {
     }
     
     public void addContact(Contact contact) {
-        if (findContactByName(contact.getName()) != null) {
-            System.out.println("El contacto ya existe.");
-            return;
+        Node<Contact> current = contacts.getHead();
+        while (current != null) {
+            if (current.getValue().getName().equals(contact.getName())) {
+                System.out.println("El contacto ya existe.");
+                return;
+            }
+            current = current.getNext();
         }
+        
         contacts.appendToTail(contact);
         System.out.println("Contacto agregado exitosamente.");
     }
@@ -21,7 +26,7 @@ public class ContactManager {
     public Contact findContactByName(String name) {
         Node<Contact> current = contacts.getHead();
         while (current != null) {
-            if (current.getValue().getName().equalsIgnoreCase(name)) {
+            if (current.getValue().getName().equals(name)) {
                 return current.getValue();
             }
             current = current.getNext();
@@ -30,13 +35,17 @@ public class ContactManager {
     }
     
     public void deleteContactByName(String name) {
-        Contact contactToDelete = findContactByName(name);
-        if (contactToDelete != null) {
-            contacts.deleteByValue(contactToDelete);
-            System.out.println("Contacto eliminado exitosamente.");
-        } else {
-            System.out.println("Contacto no encontrado.");
+        Node<Contact> current = contacts.getHead();
+        while (current != null) {
+            if (current.getValue().getName().equals(name)) {
+                if (contacts.deleteByValue(current.getValue())) {
+                    System.out.println("Contacto eliminado exitosamente.");
+                    return;
+                }
+            }
+            current = current.getNext();
         }
+        System.out.println("Contacto no encontrado.");
     }
     
     public void printList() {

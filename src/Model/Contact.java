@@ -9,11 +9,6 @@ public class Contact {
         this.phone = phone;
     }
     
-    public Contact(String name) {
-        this.name = name;
-        this.phone = null;
-    }
-    
     public String getName() {
         return name;
     }
@@ -37,29 +32,14 @@ public class Contact {
     
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        
-        if (obj == null) {
-            return false;
-        }
-        
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
+        if (obj == null) return false;
+        if (!(obj instanceof Contact)) return false;
         
         Contact other = (Contact) obj;
         
-        if (this.name == null) {
-            return other.name == null;
-        }
+        if (this.name == null && other.name == null) return true;
+        if (this.name == null || other.name == null) return false;
         
-        return this.name.equalsIgnoreCase(other.name);
-    }
-    
-    @Override
-    public int hashCode() {
-        return name == null ? 0 : name.toLowerCase().hashCode();
+        return this.name.equals(other.name); 
     }
 }
