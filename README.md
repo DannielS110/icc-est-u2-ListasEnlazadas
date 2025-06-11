@@ -1,18 +1,64 @@
-## Getting Started
+📱 Sistema de Gestión de Contactos
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Universidad Politecnica Salesiana
 
-## Folder Structure
+integrantes: Daniel Sanchez Valle 
 
-The workspace contains two folders by default, where:
+2 ciclo 
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Estructura de Datos
+----------------------------------------------------------------------------------------------------------------
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+🎯 Descripción
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Un elegante sistema de gestión de contactos desarrollado en Java puro, implementando el patrón MVC con estructuras de datos personalizadas. Sin dependencias externas, solo código limpio y eficiente.
+----------------------------------------------------------------------------------------------------------------
 
-## Dependency Management
+🎮 Guía de Usuario
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+🏠 Pantalla Principal
+
+╔══════════════════════════════════════╗
+║   SISTEMA DE GESTIÓN DE CONTACTOS    ║
+╠══════════════════════════════════════╣
+║  1. 📝 Agregar contacto      
+                                       ║
+║  2. 🔍 Buscar contacto 
+                                       ║
+║  3. 🗑️  Eliminar contacto  
+                                       ║
+║  4. 📋 Mostrar todos los contactos  
+║
+║  5. 🚪 Salir                         ║
+╚══════════════════════════════════════╝
+----------------------------------------------------------------------------------------------------------------
+💡 Ejemplo de Uso
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------
+🏗️ Arquitectura
+
+
+🏛️ Capa                                   📦 Componente                  🎯 ResponsabilidadModelContact   
+
+Model                                       Contact                       👤 Entidad de datosModelLinkedList
+
+Model                                       LinkedList                    📋 Estructura de datosModelNode
+
+Model                                       Node                          🔗 Elemento de listaControllerContactManager
+
+Controller                                  ContactManager                🧠 Lógica de negocioControllerMenuController
+
+Controller                                  MenuController                🎮 Control de flujoViewConsoleView
+
+View                                        ConsoleView                   🖥️ Interfaz de usuario
+
+
+
+----------------------------------------------------------------------------------------------------------------
