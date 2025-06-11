@@ -19,9 +19,11 @@ Un elegante sistema de gestión de contactos desarrollado en Java puro, implemen
 🏠 Pantalla Principal
 
 ╔══════════════════════════════════════╗
+
 ║   SISTEMA DE GESTIÓN DE CONTACTOS    ║
 
 ╠══════════════════════════════════════╣
+
 ║  1. 📝 Agregar contacto      
                                        ║
 ║  2. 🔍 Buscar contacto 
@@ -29,8 +31,11 @@ Un elegante sistema de gestión de contactos desarrollado en Java puro, implemen
 ║  3. 🗑️  Eliminar contacto  
                                        ║
 ║  4. 📋 Mostrar todos los contactos  
+
 ║
-║  5. 🚪 Salir                         ║
+
+║  5. 🚪 Salir    
+║
 ╚══════════════════════════════════════╝
 ----------------------------------------------------------------------------------------------------------------
 💡 Ejemplo de Uso
